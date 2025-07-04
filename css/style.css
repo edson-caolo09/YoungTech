@@ -1,0 +1,218 @@
+/* Style Geral */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
+.section{
+  margin: 80px 0;
+}
+body{
+  background: #dbdbdb;
+}
+.section h2,.section p{
+  color:hsla(213, 100%, 8%);
+}
+.white{
+    background: #fff;
+    color: #fff;
+}
+body{
+  position: relative;
+}
+.overlay{
+  border: 1px solid #000;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #001229c0;
+  top: 0;
+}
+.fundo {
+  background-position: center;
+  background-size: cover;
+}
+.flex_center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.interface {
+  margin: 0 auto;
+  max-width: 1500px;
+  width: 90%;
+}
+.button {
+  border: 1px solid #fff;
+  background-color: #fff;
+  color: #000;
+  transition: .5s;
+  cursor: pointer;
+}
+.button:hover {
+  background-color: transparent;
+  color: #fff;
+}
+/* Style Header */
+.head,.hero h2,p,a,button{
+  color: #fff;
+}
+.head{
+  width: 100%;
+  padding: 10px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  transition: .1s;
+}
+.scroll{
+  background-color: #001229;
+}
+.head .interface.flex_center{
+  justify-content: space-between;
+}
+.head .logo_head.flex_center{
+  gap: 20px;
+}
+.head .logo_head.flex_center img{
+  width: 60px;
+  height: 60px;
+}
+.head .logo_head.flex_center h1{
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.head .logo_head.flex_center h1 span{
+  display: block;
+  margin-top: 3px;
+  font-size: .6rem;
+  color: #ccc;
+}
+.head .menu_head nav ul{
+  gap: 30px;
+}
+.head .menu_head nav ul li a{
+  font-size: 1.2rem;
+  position: relative;
+  padding: 3px 0;
+}
+.head .menu_head nav ul li a::after{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  height: 2.5px;
+  background: #fff;
+  border-radius: 3px;
+  width: 0;
+  transition: width 0.3s ease, left 0.3s ease;
+  transform: translateX(-50%);
+}
+.head .menu_head nav ul li a:hover::after{
+  width: 100%;
+  left: 50%;
+}
+.head .button_head a button{
+  width: 150px;
+  height: 50px;
+  font-size: 1.1rem;
+}
+
+/* Style Hero */
+.hero{
+  width: 100%;
+  height: 100vh;
+  background-image: url(../img/pexels-fauxels-3184418.jpg);
+  position: relative;
+}
+.hero .interface.flex_center{
+  flex-direction: column;
+  height: 100%;
+  max-width: 800px;
+  gap: 20px;
+  text-align: center;
+  z-index: 2;
+}
+.hero .interface.flex_center h2{
+  font-size: 3rem;
+  z-index: 2;
+}
+.hero .interface.flex_center p{
+  font-size: 1.8rem;
+  z-index: 2;
+}
+.hero .interface.flex_center a{
+  z-index: 2;
+}
+.hero .interface.flex_center .button{
+  width: 220px;
+  font-size: 1.3rem;
+  height: 50px;
+  font-weight: bold;
+}
+
+/* Style Serviços */
+.services{
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 30px;
+}
+.services .text_services{
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.services .text_services h2{
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+.services .text_services p{
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.services .content_services{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+.services .content_services .card{
+  flex: 0 1 300px;
+  background: #fff;
+  margin: 0 auto;
+}
+.services .content_services .card a{
+  color: #00b10f;
+  font-size: .9rem;
+  transition: .3s;
+}
+.services .content_services .card a:hover{
+  text-decoration: underline;
+}
+.services .content_services .card{
+  padding: 20px;
+  box-shadow: 0 0 10px #001229;
+  border-radius: 10px;
+  gap: 5px;
+  flex-direction: column;
+}
+.services .content_services .card .img_card img{
+  width: 100px;
+  height: 100px;
+}
+.services .content_services .card .detalhes p{
+  font-size: .8rem;
+}
+.services .content_services .card .detalhes h3{
+  font-size: 1rem;
+}
+.services .content_services .card .detalhes{
+  flex-direction: column;
+  gap: 12px;
+  text-align: center;
+}

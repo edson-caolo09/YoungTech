@@ -8,15 +8,25 @@
   font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
 }
+h1,h2,h3,h4{
+  font-weight: 500;
+}
 .section {
-  margin: 80px 0;
+  margin: 120px 0;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 30px;
 }
 body {
-  background-image: url(../img/body_bg.jpg);
+  background-image: url(../img/bg.jpg);
 }
 .section h2,
 .section p {
   color: hsla(213, 100%, 8%);
+}
+.section h2 {
+  font-size: 3rem;
+  text-align: center;
 }
 .white {
   background: #fff;
@@ -88,6 +98,7 @@ button {
 .scroll {
   background-color: #fff;
   transition: 0.5s;
+  box-shadow: 0 0 20px #001229;
 }
 .head .interface.flex_center {
   justify-content: space-between;
@@ -201,34 +212,30 @@ button {
   z-index: 1;
 }
 /* Style Serviços */
-.services {
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 30px;
-}
 .services .text_services {
   text-align: center;
   max-width: 800px;
   margin: 0 auto;
 }
-.services .text_services h2 {
-  font-size: 3rem;
-  margin-bottom: 10px;
-}
 .services .text_services p {
   font-size: 1.2rem;
   font-weight: bold;
 }
-.services .content_services {
-  display: flex;
+.services .content_services ,.why .content_why,.sobre .content_sobre {
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 20px;
 }
-.services .content_services .card {
-  flex: 0 1 300px;
+.services .content_services .card{
+  flex: .3 1 300px;
   background: #fff;
   margin: 0 auto;
+  padding: 30px;
+  box-shadow: 0 0 20px #001229;
+  border-radius: 10px;
+  min-height: 300px;
+  gap: 5px;
+  flex-direction: column;
 }
 .services .content_services .card a {
   color: #00b10f;
@@ -237,13 +244,6 @@ button {
 }
 .services .content_services .card a:hover {
   text-decoration: underline;
-}
-.services .content_services .card {
-  padding: 20px;
-  box-shadow: 0 0 10px #001229;
-  border-radius: 10px;
-  gap: 5px;
-  flex-direction: column;
 }
 .services .content_services .card .img_card img {
   width: 100px;
@@ -260,3 +260,118 @@ button {
   gap: 12px;
   text-align: center;
 }
+/* section services */
+
+/* Section Why */
+.why h2{
+  text-align: center;
+}
+.logo_why img {
+  width: 200px;
+  height: 200px;
+}
+.block_why.flex_center{
+  flex-direction: column;
+  flex: .5 1 300px;
+  margin: 0 auto;
+  gap: 30px;
+}
+.card_why{
+  gap: 20px;
+}
+#block_1{
+  text-align: right;
+}
+.card_why_text{
+  min-height: 100px;
+}
+.card_why_text h4{
+  margin-bottom: 5px;
+}
+.card_why_text p{
+  font-size: .8rem;
+  line-height: 15px;
+}
+.card_why_img{
+  min-height: 100px;
+}
+.card_why_img.flex_center{
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.card_why .card_why_img img{
+  width: 60px;
+  height: 60px;
+}
+.text_why.interface{
+  max-width: 1000px;
+  margin-bottom: 50px;
+}
+.text_why h2,.text_why p {
+  text-align: center;
+}
+/* Section Why */
+
+/* Section Sobre */
+.sobre{
+  width: 100%;
+  padding:10vh;
+  background-color: #fff;
+  background-image: url(../img/sobre.jpg);
+  background-attachment: fixed;
+  position: relative;
+}
+.text_sobre {
+  text-align: center;
+  margin: 0 auto;
+  max-width: 800px;
+  margin-bottom: 30px;
+  z-index: 2;
+  color: #fff;
+}
+.text_sobre h2,.text_sobre p {
+  color: #fff;
+}
+.content_sobre .card_sobre h3 {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+.content_sobre{
+  z-index: 2;
+}
+.content_sobre .card_sobre {
+  flex: 0 0 350px;
+  margin: 0 auto;
+  height: 350px;
+  width: 350px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background-color: #fff;
+  background-color: #001229;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+}
+.content_sobre .card_sobre:hover h3{
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+.content_sobre .card_sobre:hover p {
+  top: 30%;
+  transition: top 0.5s ease-in-out;
+}
+.content_sobre .card_sobre p{
+  position: absolute;
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  top: 100%;
+  padding: 20px;
+  color: #fff;
+}
+/* Section Sobre */
